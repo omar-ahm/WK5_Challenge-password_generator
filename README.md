@@ -7,7 +7,9 @@ The challenge was to use what we learned throughout week 5 of Bootcamp and updat
 #
 ## Screenshot of application
 
-The below image shows the final web application appearance:
+Below is a link to the deployed application and a screenshot:
+#
+https://omar-ahm.github.io/WK5_Challenge-password_generator/
 #
 ![Alt text](assets/html%20screenshot.png)
 #
