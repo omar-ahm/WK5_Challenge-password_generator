@@ -95,6 +95,21 @@ function getPasswordOptions() {
   alert("Password length must be between 10-64 characters. Try again. "); // Alert is the user enters a below 10 or over 64
   passwordLength = prompt("Enter the length of your password (Must be between 10-64 characters"); // Then prompts user again for input
  } // This loop will continue running until the user enters a number between 10-64
+
+ var specChar = confirm("Do you want to include $pecial characters? ");
+ var numChar = confirm("Do you want to include numeric characters? ");
+ var lowChar = confirm("Do you want to include lowerCASE characters? ");
+ var uppChar = confirm("Do you want to include UPPERcase characters? ")
+
+ // key calue pairs for option selection 
+ var passwordOptions = {
+  passwordLength: passwordLength,
+  specChar: specChar,
+  numChar: numChar,
+  lowChar: lowChar,
+  uppChar: uppChar
+ };
+ return passwordOptions;
 }
 
 // Function for getting a random element from an array
