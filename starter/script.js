@@ -145,7 +145,8 @@ function generatePassword() {
   for (var i = 0; i <options.passwordLength; i++) {
     password += getRandom(optionsSelected)
   }
-  return password;
+  alert("Your password has been created");
+  return "Your secure password \n" + "\n" + password;
 }
 
 // Get references to the #generate element
