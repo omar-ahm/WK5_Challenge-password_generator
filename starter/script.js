@@ -97,7 +97,7 @@ function getPasswordOptions() {
  } // This loop will continue running until the user enters a number between 10-64
 
  var specChar = confirm("Do you want to include $pecial characters? ");
- var numChar = confirm("Do you want to include numeric characters? ");
+ var numChar = confirm("Do you want to include num3ric characters? ");
  var lowChar = confirm("Do you want to include lowerCASE characters? ");
  var uppChar = confirm("Do you want to include UPPERcase characters? ")
 
