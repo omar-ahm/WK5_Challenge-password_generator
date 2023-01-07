@@ -88,9 +88,13 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Function to prompt user for password options
+// Function to prompt user for password length
 function getPasswordOptions() {
-
+ var passwordLength = prompt("Enter the length of your password (Must be between 10-64 characters");
+ while (passwordLength < 10 || passwordLength > 64) {
+  alert("Password length must be between 10-64 characters. Try again. "); // Alert is the user enters a below 10 or over 64
+  passwordLength = prompt("Enter the length of your password (Must be between 10-64 characters"); // Then prompts user again for input
+ } // This loop will continue running until the user enters a number between 10-64
 }
 
 // Function for getting a random element from an array
