@@ -120,7 +120,32 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+  var options = getPasswordOptions();
+  var optionsSelected = [];
 
+  // Access the character type arrays to combine and create the password
+  // that gets stored in the "optionsSelected" array
+  if (options.specChar){
+    optionsSelected = optionsSelected.concat(specialCharacters);
+  }
+  if (options.numChar){
+    optionsSelected = optionsSelected.concat(numericCharacters);
+  }
+  if (options.lowChar){
+    optionsSelected = optionsSelected.concat(lowerCasedCharacters);
+  }
+  if (options.uppChar){
+    optionsSelected = optionsSelected.concat(upperCasedCharacters);
+  }
+
+  // Declare variable for where the final password will be stored
+  var password = "";
+
+  // For loop to iterate and generate password based on user selections
+  for (var i = 0; i <options.passwordLength; i++) {
+    password += getRandom(optionsSelected)
+  }
+  return password;
 }
 
 // Get references to the #generate element
