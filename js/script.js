@@ -101,6 +101,13 @@ function getPasswordOptions() {
  var lowChar = confirm("Do you want to include lowerCASE characters? ");
  var uppChar = confirm("Do you want to include UPPERcase characters? ")
 
+ // "If" loop to alert user to enter at least one character option before moving on
+ // if user doesnt select option it will ask them to try again, if they do it will continue through the remaining code
+ if(!specChar && !numChar && !lowChar && !uppChar) {
+  alert("You need to select at least 1 character option. Try again.");
+return getPasswordOptions()
+}
+
  // key calue pairs for option selection 
  var passwordOptions = {
   passwordLength: passwordLength,
